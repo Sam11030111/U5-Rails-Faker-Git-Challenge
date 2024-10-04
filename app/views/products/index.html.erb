@@ -1,9 +1,8 @@
-<h1>All Products</h1>
-
+<h1>Products</h1>
 <ul>
   <% @products.each do |product| %>
     <li>
-      <%= link_to product.title, product_path(product) %> - <%= product.price %> (Stock: <%= product.stock_quantity %>)
+      <%= link_to product.title, product_path(product) %> - <%= product.price %> - Stock: <%= product.stock_quantity %> - Category: <%= product.category.name %>
     </li>
   <% end %>
 </ul>
